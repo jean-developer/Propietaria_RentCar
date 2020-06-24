@@ -1,0 +1,18 @@
+
+----Viernes
+Vehiculo 
+Empleado 
+Cliente 
+
+----Sabado
+Inspeccion
+Renta 
+Menu Principal 
+
+----Domingo
+Login 
+Reportes PDF 
+
+----Lunes
+Revision completa
+
