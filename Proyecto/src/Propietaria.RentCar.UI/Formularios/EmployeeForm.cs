@@ -71,7 +71,6 @@ namespace Propietaria.RentCar.UI.Formularios
                 if (string.IsNullOrEmpty(errors))
                 {
                     Employee model = new Employee();
-                    model.Id = GetId("Id");
                     model.Name = txtNombre.Text;
                     model.LastName = txtApellido.Text;
                     model.Commission = Convert.ToDecimal(txtComision.Text);
@@ -89,6 +88,7 @@ namespace Propietaria.RentCar.UI.Formularios
                     }
                     else
                     {
+                        model.Id = GetId("Id");
                         Update(model);
                         message = "Registro actualizado correctamente";
                     }

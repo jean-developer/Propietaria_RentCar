@@ -67,5 +67,47 @@ namespace Propietaria.RentCar.UI
             TrademarkForm trademarkForm = new TrademarkForm();
             trademarkForm.Show();
         }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            CustomerForm CustomerForm = new CustomerForm();
+            CustomerForm.Show();
+            this.Hide();
+        }
+
+        private void panel6_Click(object sender, EventArgs e)
+        {
+            VehicleForm VehicleForm = new VehicleForm();
+            VehicleForm.Show();
+            this.Hide();
+        }
+
+        private void panel7_Click(object sender, EventArgs e)
+        {
+            EmployeeForm EmployeeForm = new EmployeeForm();
+            EmployeeForm.Show();
+            this.Hide();
+        }
+
+        private void panel15_Click(object sender, EventArgs e)
+        {
+            ModelsForm ModelsForm = new ModelsForm();
+            ModelsForm.Show();
+            this.Hide();
+        }
+
+        private void panel8_Click(object sender, EventArgs e)
+        {
+            RentForm RentForm = new RentForm();
+            RentForm.Show();
+            this.Hide();
+        }
+
+        private void panel9_Click(object sender, EventArgs e)
+        {
+            InspectionForm InspectionForm = new InspectionForm();
+            InspectionForm.Show();
+            this.Hide();
+        }
     }
 }

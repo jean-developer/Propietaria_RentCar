@@ -1,4 +1,5 @@
 ﻿using Propietaria.RentCar.Core.Entities;
+using Propietaria.RentCar.Infrastructure.Dapper.Query;
 using Propietaria.RentCar.Infrastructure.Dapper.Query.Helpers;
 using Propietaria.RentCar.Infrastructure.Dapper.Query.Rent;
 using Propietaria.RentCar.Infrastructure.Dapper.UnitOfWork;
@@ -20,6 +21,7 @@ namespace Propietaria.RentCar.UI.Formularios
 
         private readonly IUnitOfWork _unitOfWork;
         private int _id = 0;
+        private int lastIdVehicle = 0;
         public RentForm()
         {
             var connectionString = ConfigurationManager.ConnectionStrings["RentCarDb"].ConnectionString;
@@ -36,7 +38,7 @@ namespace Propietaria.RentCar.UI.Formularios
         private void SetComboBoxEmpleados()
         {
             cbEmpleado.Items.Clear();
-            GetAllEmployee repository = new GetAllEmployee();
+            Infrastructure.Dapper.Query.Helpers.GetAllEmployee repository = new Infrastructure.Dapper.Query.Helpers.GetAllEmployee();
             var list = repository.Get();
             cbEmpleado.Items.Add("Seleccione un empleado");
             cbEmpleado.Items.AddRange(list);
@@ -47,7 +49,7 @@ namespace Propietaria.RentCar.UI.Formularios
         private void SetComboBoxVehicles()
         {
             cbVhiculo.Items.Clear();
-            GetAllVehicle repository = new GetAllVehicle();
+            Infrastructure.Dapper.Query.Helpers.GetAllVehicle repository = new Infrastructure.Dapper.Query.Helpers.GetAllVehicle();
             var list = repository.Get();
             cbVhiculo.Items.Add("Seleccione un vehiculo");
             cbVhiculo.Items.AddRange(list);
@@ -110,7 +112,9 @@ namespace Propietaria.RentCar.UI.Formularios
         {
             if (dataGridView1.SelectedRows.Count == 1)
             {
+                GetIdByName repository = new GetIdByName();
                 PopulateForm();
+                lastIdVehicle = repository.GetVehicleId(cbVhiculo.Text);
             }
             else
             {
@@ -197,7 +201,7 @@ namespace Propietaria.RentCar.UI.Formularios
                 string title = "Informacion";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
                 MessageBox.Show(message, title, buttons, MessageBoxIcon.Error);
-                throw ex;
+                //throw ex;
             }
 
         }
@@ -256,20 +260,47 @@ namespace Propietaria.RentCar.UI.Formularios
             txtMontoDiario.Text = "";
             dtpFechaDevolucion.Value =DateTime.Now;
             dtpFechaRenta.Value =DateTime.Now.AddDays(-8);
+            lastIdVehicle = 0;
+
         }
         private void Add(Rent model)
         {
+            GetByIdVehicle repository = new GetByIdVehicle();
+            var vehiculo = repository.Get(model.IdVehicle);
+            vehiculo.Estado = "Rentado";
+            _unitOfWork.VehicleRepository.UpdateStatus(vehiculo.Id, "Rentado");
+
             _unitOfWork.RentRepository.Add(model);
         }
         private void Edit(Rent model)
         {
+            UpdateLastVehicle(model);
+            _unitOfWork.VehicleRepository.UpdateStatus(model.Id, "Rentado");
             _unitOfWork.RentRepository.Update(model);
 
+        }
+
+        private void UpdateLastVehicle(Rent model)
+        {
+            GetByIdVehicle repository = new GetByIdVehicle();
+            var lastVehiculo = repository.Get(lastIdVehicle);
+            if (model.IdVehicle != lastVehiculo.Id)
+            {
+                lastVehiculo.Estado = "Rentado";
+                _unitOfWork.VehicleRepository.UpdateStatus(lastVehiculo.Id, "Activo");
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             Clear();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal menuPrincipal = new MenuPrincipal();
+            menuPrincipal.Show();
+            this.Close();
         }
     }
 }

@@ -102,7 +102,26 @@ namespace Propietaria.RentCar.Infrastructure.Dapper.Repositories
         private DynamicParameters GenerateParametersForDelete(int id)
         {
             DynamicParameters parameters = new DynamicParameters();
-            parameters.Add("Id", id, DbType.Int32, ParameterDirection.Input);
+            parameters.Add("@Id", id, DbType.Int32, ParameterDirection.Input);
+            return parameters;
+        }
+        public void UpdateStatus(int id, string status)
+        {
+            string sql = @"UPDATE Vehiculos
+                              SET Estado = @Estado
+                            WHERE Id=@Id;";
+
+
+            _transaction.Connection.Execute(sql, GenerateParametersForUpdateStatus(id, status), transaction: _transaction);
+        }
+
+
+
+        private DynamicParameters GenerateParametersForUpdateStatus(int id, string status)
+        {
+            DynamicParameters parameters = new DynamicParameters();
+            parameters.Add("@Id", id, DbType.Int32, ParameterDirection.Input);
+            parameters.Add("@Estado", status, DbType.String, ParameterDirection.Input, 10);
             return parameters;
         }
     }

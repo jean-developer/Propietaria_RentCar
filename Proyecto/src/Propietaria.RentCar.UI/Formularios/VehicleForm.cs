@@ -299,6 +299,18 @@ namespace Propietaria.RentCar.UI.Formularios
             MessageBoxButtons buttons = MessageBoxButtons.OK;
             MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
         }
+
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal menuPrincipal = new MenuPrincipal();
+            menuPrincipal.Show();
+            this.Close();
+        }
     }
 
     public class ComboBoxsValues

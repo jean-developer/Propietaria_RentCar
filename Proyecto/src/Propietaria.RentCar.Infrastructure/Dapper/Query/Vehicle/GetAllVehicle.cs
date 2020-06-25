@@ -28,7 +28,7 @@ namespace Propietaria.RentCar.Infrastructure.Dapper.Query.Vehicle
 							 INNER JOIN TipoVehiculo ON TipoVehiculo.Id=Vehiculos.IdTipoVehiculo
 							 INNER JOIN TipoCombustible ON TipoCombustible.Id=Vehiculos.IdTipoCombustible
 							 INNER JOIN Modelos ON Modelos.Id=Vehiculos.IdModelo
-							 Where Vehiculos.Estado = 'Activo';";
+							 Where Vehiculos.Estado = 'Activo' OR Vehiculos.Estado = 'Rentado'";
 
             using (var connection = new SqlConnection(_connectionString))
                 return connection.Query<VehiculosVM>(sql);

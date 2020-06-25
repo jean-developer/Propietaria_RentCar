@@ -36,7 +36,7 @@ namespace Propietaria.RentCar.UI.Auth
         private void btnLogin_Click(object sender, EventArgs e)
         {
             var username = txtUserName.Text;
-            var password = txtUserName.Text;
+            var password = txtPassword.Text;
             var errors = Validattions(username, password);
             string message = "";
             var icon = MessageBoxIcon.Information;
@@ -59,6 +59,14 @@ namespace Propietaria.RentCar.UI.Auth
                     string title = "Información";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
                     MessageBox.Show(message, title, buttons, icon);
+
+                    if(message == "Login Correcto")
+                    {
+                        MenuPrincipal menuPrincipal = new MenuPrincipal();
+                        menuPrincipal.Show();
+                        this.Hide();
+                    }
+
                 }
                 else
                 {
@@ -109,6 +117,18 @@ namespace Propietaria.RentCar.UI.Auth
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
+        {
+            RegisterForm register = new RegisterForm();
+            register.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             RegisterForm register = new RegisterForm();
             register.Show();

@@ -1,4 +1,5 @@
-﻿using Propietaria.RentCar.UI.Formularios;
+﻿using Propietaria.RentCar.UI.Auth;
+using Propietaria.RentCar.UI.Formularios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Propietaria.RentCar.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuPrincipal());
+            Application.Run(new LoginForm());
         }
     }
 }

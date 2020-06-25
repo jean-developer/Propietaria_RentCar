@@ -10,5 +10,6 @@ namespace Propietaria.RentCar.Core.Application.Repositories
         void Add(Vehicle vehicle);
         void Update(Vehicle vehicle);
         void Delete(int id);
+        void UpdateStatus(int id, string status);
     }
 }

@@ -69,9 +69,7 @@ namespace Propietaria.RentCar.UI.Auth
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            LoginForm login = new LoginForm();
-            login.Show();
-            this.Hide();
+            
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -124,6 +122,13 @@ namespace Propietaria.RentCar.UI.Auth
         private void btnClear_Click(object sender, EventArgs e)
         {
             Clear();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoginForm login = new LoginForm();
+            login.Show();
+            this.Close();
         }
     }
 }

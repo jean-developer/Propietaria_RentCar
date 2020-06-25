@@ -236,5 +236,11 @@
   <ItemGroup>
     <None Include="Resources\OIP.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDelete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\user.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

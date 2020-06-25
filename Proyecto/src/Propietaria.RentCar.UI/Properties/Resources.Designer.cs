@@ -103,6 +103,16 @@ namespace Propietaria.RentCar.UI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnDelete1 {
+            get {
+                object obj = ResourceManager.GetObject("btnDelete1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnEdit {
             get {
                 object obj = ResourceManager.GetObject("btnEdit", resourceCulture);
