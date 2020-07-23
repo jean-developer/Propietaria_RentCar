@@ -1,0 +1,9 @@
+\\Mac\Home\Documents\@PERSONAL_PROJECTS\Propietaria_RentCar\PROYECT\src\Propietaria.RentCar.Core\bin\Debug\netstandard2.0\RentCar.Core.deps.json
+\\Mac\Home\Documents\@PERSONAL_PROJECTS\Propietaria_RentCar\PROYECT\src\Propietaria.RentCar.Core\bin\Debug\netstandard2.0\RentCar.Core.dll
+\\Mac\Home\Documents\@PERSONAL_PROJECTS\Propietaria_RentCar\PROYECT\src\Propietaria.RentCar.Core\bin\Debug\netstandard2.0\RentCar.Core.pdb
+\\Mac\Home\Documents\@PERSONAL_PROJECTS\Propietaria_RentCar\PROYECT\src\Propietaria.RentCar.Core\obj\Debug\netstandard2.0\RentCar.Core.csprojAssemblyReference.cache
+\\Mac\Home\Documents\@PERSONAL_PROJECTS\Propietaria_RentCar\PROYECT\src\Propietaria.RentCar.Core\obj\Debug\netstandard2.0\RentCar.Core.AssemblyInfoInputs.cache
+\\Mac\Home\Documents\@PERSONAL_PROJECTS\Propietaria_RentCar\PROYECT\src\Propietaria.RentCar.Core\obj\Debug\netstandard2.0\RentCar.Core.AssemblyInfo.cs
+\\Mac\Home\Documents\@PERSONAL_PROJECTS\Propietaria_RentCar\PROYECT\src\Propietaria.RentCar.Core\obj\Debug\netstandard2.0\RentCar.Core.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\@PERSONAL_PROJECTS\Propietaria_RentCar\PROYECT\src\Propietaria.RentCar.Core\obj\Debug\netstandard2.0\RentCar.Core.dll
+\\Mac\Home\Documents\@PERSONAL_PROJECTS\Propietaria_RentCar\PROYECT\src\Propietaria.RentCar.Core\obj\Debug\netstandard2.0\RentCar.Core.pdb

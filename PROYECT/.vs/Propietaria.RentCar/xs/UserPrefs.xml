@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{E0164CD0-DBA8-4AC6-B806-F10858EBAC51}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Propietaria.RentCar.Infrastructure/Dapper/Query/VehicleType/GetAllVehicleType.cs">
+    <Files>
+      <File FileName="src/Propietaria.RentCar.UI/Form1.cs" Line="32" Column="1" />
+      <File FileName="src/Propietaria.RentCar.UI/Program.cs" />
+      <File FileName="src/Propietaria.RentCar.UI/App.config" Line="1" Column="1" />
+      <File FileName="src/Propietaria.RentCar.Infrastructure/Dapper/Query/VehicleType/GetAllVehicleType.cs" Line="29" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Propietaria.RentCar" expanded="True">
+            <Node name="Core" expanded="True" />
+            <Node name="Infrastructure" expanded="True">
+              <Node name="Propietaria.RentCar.Infrastructure" expanded="True">
+                <Node name="Dapper" expanded="True">
+                  <Node name="Query" expanded="True">
+                    <Node name="VehicleType" expanded="True">
+                      <Node name="GetAllVehicleType.cs" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+            <Node name="UI" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.UI.Propietaria.RentCar.UI PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

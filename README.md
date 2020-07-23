@@ -1,12 +1,20 @@
-# RentCar
+# RentCar System
 
-Con motivo de mostrar mis habilidades desarrollando aplicaciones de escritorio nace este proyecto de *Rent car* el cual se automatizara ciertos procesos de una empresa de Renta de vehiculos, en esta aplicacion se haran los siguientes procesos: 
+Este es un sistema propuesto en la materia de Desarrollo de Software con Tecnología propietaria, impartida por el profesor Juan P. Valdez. Este es un sistema para RentCar que cumple con las siguientes características:
 
-* Creacion de Vehiculos.
-* Relacionar los vehiculos con sus tipos correspondiente.
-* Creacion de marcas.
-* Creacion de tipo de vehiculos.
-* Solicitud de renta de vehiculos.
-* Creacion de clientes.
-* Creacion de empleados.
+1. Gestión de Tipos de Vehículos
+2. Gestión de Marcas
+3. Gestión de Modelos
+4. Gestión de Tipos de Combustible
+5. Gestión de Vehículos
+6. Gestión de Clientes
+7. Gestión de Empleados (quienes asisten al cliente en la renta)
+8. Proceso de Inspección (previo a renta)
+9. Proceso de Renta y Devolución de vehículos
+10. Una consulta por criterios (ej: Rentas por Cliente, fecha, vehículo, etc.)
+11. Un Reporte de rentas: entre fechas, por tipo de vehículo, etc. 
+12. Desarrrollado en el lenguaje propietario (C#, Oracle Developer, Delphi, etc.) de su preferencia (Winform, WPF, etc.) 
 
+
+* Autor: Jean Carlos Arnaud 
+2018-1701
